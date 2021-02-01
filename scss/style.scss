@@ -1,0 +1,1014 @@
+@import "reset.scss";
+@import "normalize.scss";
+
+%t320 {
+    font-size: 22px;
+}
+
+%st320 {
+    font-size: 18px;
+}
+
+%p320 {
+    font-size: 16px;
+}
+
+%t { 
+    font-weight: 600;
+font-size: 30px;
+line-height: 37px;
+    
+}
+
+%st {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+%cont {
+    max-width: 1170px;
+    padding: 0px 15px;
+    margin: 0px auto;
+}
+
+%p {
+    font-weight: normal;
+font-size: 16px;
+line-height: 21px;
+
+}
+
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    color: #333333;
+    overflow-x: hidden;
+}
+
+/*HEADER START*/
+
+.header {
+    width: 100%;
+    height: 650px;
+    background-color: #FED100;
+    margin-bottom: 100px;
+    
+}
+
+.header__wrapper {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+    
+    
+    
+}
+
+
+
+
+.header__top-nav {
+    
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    
+    
+
+}
+
+.header__logo {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    z-index: 5;
+}
+
+
+    
+.header__nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        
+    
+        }
+
+.nav-link {
+    
+        margin-right: 50px;
+        font-size: 18px;
+        line-height: 22px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    
+
+a {
+    color: #333333;
+    &:hover {
+        opacity: 80%;
+    }
+}
+
+.contacts-link {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+   
+}
+
+
+.header__main-title {
+    max-width: 650px;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 110%;
+    margin-top: 100px;
+}
+.header__main-subtitle {
+    margin-top: 30px;
+    @extend %t;
+}
+
+.header__main-btn {
+    margin-top: 50px;
+    width: 300px;
+    height: 60px;
+    background-color: #FF352B;
+    border: none;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #F2F2F2;
+    letter-spacing: 2px;
+    transition: .3s;
+    cursor: pointer;
+    
+    &:hover {
+        background-color: #fd0d00;
+        
+    }
+}
+
+.header__main {
+    position: relative;
+    top: 0;
+    left: 0;
+    
+}
+.men-pic{
+    
+    position: absolute;
+    left: 450px;
+    top: -115px;
+    z-index: 1;
+
+}
+
+.car-pic {
+    position: absolute;
+    left: 750px;
+    top: 0px;
+    
+}
+
+/*BURGER*/
+
+.header__burger{
+display: none;
+}
+
+.header__burger span, .header__burger:before, .header__burger:after{
+    width: 100%;
+    position: absolute;
+    height: 3px;
+    background: #333;
+    transition: .3s;
+    
+    
+}
+
+.header__burger:before{
+    content: "";
+    top: 10px;
+    
+}
+
+.header__burger span{
+    top: 30px;
+}
+
+.header__burger:after{
+    content: "";
+    bottom: -10px;
+
+}
+
+
+/*BURGER END*/
+
+/*HEADER END*/
+
+
+
+/*SECTION HOW START*/
+
+.how__container {
+   @extend %cont;
+}
+
+.how__title {
+    @extend %t;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.num {
+font-weight: 300;
+font-size: 50px;
+line-height: 90px;
+border-bottom: 3px solid #FED100; 
+
+}
+
+.num__title {
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+margin-bottom: 10px;
+
+}
+
+.num__desc {
+    @extend %p;
+}
+
+.how__number {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 70px 50px;
+    margin: 0 30px;
+    margin-bottom: 80px;
+}
+
+
+/*SECTION HOW END*/
+
+
+
+
+
+/*SECTION PRICE START*/
+
+.price__container  {
+    @extend %cont;
+}
+
+.price__title {
+    @extend %t;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.price__desc {
+    @extend %st;
+    text-align: center;
+     margin-bottom: 80px;
+}
+
+.price__cards {
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0 20px;
+}
+
+.price__card  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 500px;
+    border: 1px solid rgb(214, 214, 214);
+    justify-content: space-around;
+    margin-bottom: 80px;
+    &:hover {
+        border: 1px solid #FED100;
+    }
+}
+
+.card__title {
+    font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+margin-bottom: 10px;
+}
+
+.card__desc {
+    @extend %p;
+}
+
+.card__money {
+    font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+margin-bottom: 10px;
+}
+
+.card__button {
+    width: 220px;
+    padding: 20px 0;
+    background-color: #FED100;
+    text-align: center;
+    vertical-align: middle;
+    transition: .3s;
+    cursor: pointer;
+    &:hover {
+      background-color: #87fa45;  
+    }
+}
+/*SECTION PRICE END*/
+
+
+/*SECTION AUTOPARK START*/
+
+.autopark__container {
+    @extend %cont;
+    
+}
+
+.autopark__title {
+    @extend %t;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.autopark__desc {
+ @extend %st;
+    text-align: center;
+    
+    margin-bottom: 80px;
+}
+
+.autopark__tabs-conteiner {
+    margin: 0px 0px 50px 0px;
+}
+
+.autopark__tabs {
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+
+.autopark__cards {
+    
+    max-width: 960px;
+    margin: 0px auto;
+    padding: 30px 0;
+    min-height: 300px;
+    margin-bottom: 50px;
+
+}
+
+.autopark__card {
+    max-width: 960px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0px 70px;
+    display: none;
+    margin-bottom: 50px;
+}
+
+.autopark__card--active {
+    display: block;
+    min-height: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0px 70px;
+    margin-bottom: 50px;
+}
+
+.autopark__card-desc {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+margin: 10px 0;
+
+
+}
+
+.autopark__card-images {
+    width: 500px;
+}
+
+.autopark__card-pic {
+width: 100%;
+height: auto;
+margin: 10px;
+display: block;
+
+
+}
+
+
+
+.tab__item {
+    width: 200px;
+    height: 50px;
+    
+    border: 1px solid  rgb(214, 214, 214);
+    margin: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+       border: 1px solid #FED100; 
+    }
+}
+
+.tab__item--active {
+    background-color:#FED100;
+}
+
+
+
+.tab__title {
+    font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+margin-bottom: 10px;
+}
+.tab__desc {
+    @extend %p;
+}
+
+.tab__button {
+    width: 150px;
+    padding: 12px 0;
+    background-color: #FED100;
+    text-align: center;
+    vertical-align: middle;
+    transition: .3s;
+    cursor: pointer;
+    &:hover {
+      background-color: #87fa45;  
+    }
+}
+
+/*SECTION AUTOPARK END*/
+
+
+/*SECTION COMMENT START*/
+
+.comment {
+    width: 100%;
+    height: auto;
+    background-color: #FED100;
+    margin-bottom: 120px;
+    padding-bottom: 50px;
+    
+}
+.comment__container {
+    @extend %cont;
+     padding: 0 30px;
+}
+.comment__title {
+    @extend %t;
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: 80px;
+}
+
+.comment__list {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 0 50px;
+}
+
+.comment__name {
+    @extend %st;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 20px;
+}
+.comment__date {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.comment__text {
+    @extend  %p;
+    display: block;
+    line-height: 24px;
+    margin-bottom: 50px;
+}
+
+
+
+.comment__button {
+    width: 200px;
+    padding: 12px 0;
+    text-align: center;
+    vertical-align: middle;
+    transition: .3s;
+    cursor: pointer;
+    border: 1px solid  #333333;
+    margin: 0 auto;
+    
+    
+    &:hover {
+       opacity: 80%;
+         }
+}
+/*SECTION COMMENT END*/
+
+
+/*SECTION FORM START*/
+
+.form__title {
+    @extend %t;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+.form__desc {
+    @extend %st;
+    text-align: center;
+    margin-bottom: 70px;
+
+}
+
+.callback-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.callback-form__field {
+  width: 250px;
+  background-color: transparent;
+  background-size: 20px;
+  border: 0;
+  border-bottom: 2px solid #bfc0c5;
+  margin-right: 60px;
+  padding-left: 43px;
+  padding-bottom: 22px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #333333;
+  outline: 0;
+  outline-offset: 0;
+}
+
+.callback-form__field::placeholder {
+  font-weight: 500;
+  font-size: 18px;
+  color: #8f8f8f;
+}
+
+.callback-form__submit {
+  margin-top: 50px;
+    width: 250px;
+    height: 60px;
+    background-color: #FF352B;
+    border: none;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+    color: #F2F2F2;
+    letter-spacing: 2px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.callback-form__submit:hover,
+.callback-form__submit:focus,
+.callback-form__submit:active {
+  background: #fd0d00;
+}
+
+
+/*SECTION FORM END*/
+
+
+
+/*SECTION CONTACT START*/
+
+.contacts__container {
+    width: 100%;
+    height: 700px;
+
+}
+
+.contacts__info {
+    width: 400px;
+    height: 350px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 20%;
+    transform: translate(0, -150%);
+}
+
+.contacts__info-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    padding: 30px;
+    justify-content: space-between;
+}
+
+.contacts__info-title {
+    @extend %st;
+    font-weight: 500;
+}
+.contacts__info-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+}
+.contacts__info-desc {
+    @extend %p;
+}
+
+.contact-social-icon {
+    display: flex;
+    width: 200px;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.contacts__map {
+    
+    width: 100%;
+    overflow-x: hidden;
+
+}
+
+
+/*SECTION CONTACT END*/
+
+
+/*SECTION FOOTER START*/
+.footer {
+    width: 100%;
+    height: auto;
+    background-color: #FED100;
+}
+
+.footer__container {
+    height: inherit;
+   @extend %cont;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px 20px;
+   
+
+} 
+
+.footer__social-icon {
+    display: flex;
+    flex-direction: row;
+    width: 150px;
+    justify-content: space-between;
+
+}
+
+.footer__logo {
+    @extend %st;
+    font-weight: 500;
+}
+
+.footer__callback {
+    width: 200px;
+    padding: 12px 0;
+    text-align: center;
+    transition: .3s;
+    cursor: pointer;
+    border: 1px solid  #333333;
+    
+    
+    &:hover {
+       opacity: 80%;
+         }
+}
+/*SECTION FOOTER END*/
+
+
+/*MEDIA*/
+
+@media screen and (max-width:992px) {
+    
+    .men-pic {
+    left: 400px;
+    top: -117px;
+    }
+    
+    .header__nav-links {
+        
+        flex-direction: column;
+        padding: 150px 0 0 15px;
+        height: 50%;
+        justify-content: space-between;
+
+
+    }
+
+
+    .nav-link {
+        font-size: 30px;
+        text-transform: uppercase;
+        
+    }
+
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 40px;
+        cursor: pointer;
+        top: -15px;
+        right: 15px;
+        z-index: 5;
+        &::before{
+            top: 20px;
+        }
+        &:after{
+            bottom: -3px;
+        }
+    }
+
+    
+
+    .header__nav {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(241, 241, 241);
+        z-index: 3;
+        transition: all .3s ease 0s;
+    }
+
+    .header__nav.active {
+        top: 0;
+    }
+
+
+
+    .header__burger.active::before {
+    transform: rotate(45deg);
+    top: 30px;
+}
+.header__burger.active::after {
+    transform: rotate(-45deg);
+    bottom: 7px;
+}
+
+.header__burger.active span {
+    transform: scale(0);
+}
+
+.price__cards {
+    
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0 20px;
+    justify-items: center;
+}
+
+
+
+.autopark__cards {
+    
+    max-width: 960px;
+    margin: 0px auto;
+    height: 350px;
+    padding: 30px 0;
+    height: 400px;
+    margin-bottom: 100px;
+
+}
+
+.autopark__card {
+    max-width: 960px;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    margin: 0px 70px;
+    display: none;
+    
+}
+
+.autopark__card--active {
+    display: block;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    margin: 0px 70px;
+    margin-bottom: 50px;
+}
+.tab__button {
+    margin-top: 15px;
+    width: 150px;
+    padding: 8px 0;
+
+}
+.callback-form {
+
+text-align: center;
+}
+
+
+}
+
+
+@media screen and (max-width:767px) {
+
+    .header {
+        overflow: hidden;
+    }
+    
+    .men-pic {
+    display: none;
+    
+    }
+
+    .header__top-nav {
+        flex-direction: row;
+        align-items: center;
+        
+    }
+
+    .contacts-link {
+              display: none;
+    }
+
+    .header__burger {
+        position: absolute;
+        top: 25px;
+        
+        transform: translate(-50%,-50%);    
+    }
+
+    .header__main {
+
+        text-align: center;
+    }
+
+    .header__main-title {
+        font-size: 40px;
+        margin-right: 0;
+    }
+
+    .header__main-btn {
+          width: 200px;
+    }
+
+    .how__number {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 70px 50px;
+    margin: 0 30px;
+    margin-bottom: 80px;
+}
+
+.comment__list {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 0 50px;
+}
+
+   .callback-form__field {
+padding: 10px 50px;
+text-align: center;
+margin: 0 auto;
+
+} 
+
+.callback-form__submit {
+    width: 220px;
+    font-size: 16px;
+}
+
+.contacts__info {
+    margin: 0 auto;
+}
+
+
+
+.footer__container {
+    flex-direction: column;
+   height: 170px;
+    
+
+}
+
+.footer__logo {
+    margin-top: 20px;
+}
+  
+
+.footer__callback {
+    margin-bottom: 20px;
+}
+
+.form__container {
+    padding: 0 50px;
+}
+  
+}
+
+@media  screen and (min-width : 320px) and (max-width: 480px) {
+
+   .header__main {
+       margin-top: 150px;
+   }
+
+  .header__main-title {
+        font-size: 35px;
+        margin-right: 0;
+    }
+
+    .header__main-subtitle {
+font-size: 20px;
+    }
+
+    .header__main-btn {
+          width: 170px;
+    }
+
+    .price__card {
+        width: 250px;
+    }
+
+    .autopark__tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+.tab__item {
+    margin:  10px ;
+    
+}
+
+.autopark__card-images {
+    display: none;
+}
+
+.autopark__card {
+    height: 200px;
+    text-align: center;
+
+}
+
+.autopark__cards {
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.form__title {
+    font-size: 22px;
+}
+
+.form__desc {
+font-size: 16px;
+}
+
+.footer__container {
+    flex-direction: column;
+   height: 250px;
+}
+
+.header__burger {
+    top: 25px;
+}
+
+}
