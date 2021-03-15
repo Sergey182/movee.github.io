@@ -1,10 +1,8 @@
-$(document).ready(function() {
-    $('.header__burger').click(function(event) {
+$(document).ready(function () {
+    $('.header__burger').click(function () {
         $('.header__burger,.header__nav').toggleClass('active');
     });
-    
-   
-   
+
     $('.tab__item').click(function (e) {
         e.preventDefault();
 
@@ -12,22 +10,17 @@ $(document).ready(function() {
         $('.autopark__card').removeClass('autopark__card--active');
 
         $(this).addClass('tab__item--active');
-        $($(this).children().attr('href')).addClass('autopark__card--active');
-         
+        $($(this).children().attr('href')).addClass('autopark__card--active')
     });
-    
     $('.tab__item:first').click();
 
-
-        
-    
-    $("#menu").on("click","a", function (event) {
+    $("#menu").on("click", "a", function (event) {
         event.preventDefault();
-        var id  = $(this).attr('href'),
+        $('.header__burger,.header__nav').removeClass('active');
+        let id = $(this).attr('href'),
             top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 1500);
     });
-
 });
 
 
